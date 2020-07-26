@@ -1,0 +1,26 @@
+.Chat-main
+  .Chat-main__group-info
+    .Chat-main__group-info__left-side
+      .Chat-main__group-info__left-side__name
+        test 
+      %ul.Chat-main__group-info__left-side__member 
+        Member :
+        %li.Chat-main__group-info__left-side__member__list
+        aaaa
+    = link_to "#", class:  "Chat-main__group-info__right-side" do
+      Edit
+  .Chat-main__message-list
+    .Chat-main__message-list__info
+      .Chat-main__message-list__info__name
+        masa
+      .Chat-main__message-list__info__date
+        2020年07年25日　21時45分
+    .Chat-main__message-list__message
+      おはよう！
+  .Chat-main__footer
+    %form.Chat-main__footer__message-form{"accpet-charset": "UTF-8",  "method": "post"}
+      %input.Chat-main__footer__message-form__input-Content{"placeholder": "type a message", "type": "text"}
+        %label{class:"Chat-main__footer__message-form__input-Content__icon"}
+          = icon('fas', 'image')
+          %input{type: "file",  class:"Chat-main__footer__message-form__input-Content__icon__hidden"}
+      %input.Chat-main__footer__message-form__submit{"type":  "submit", "value":  "Send"}
