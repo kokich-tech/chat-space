@@ -2,11 +2,12 @@
   .Side-bar__user-name
     .Side-bar__user-name--top-items
       .Side-bar__user-name--top-items__name
+        = current_user.name
       .Side-bar__user-name--top-items__icons
         =link_to  " # ",  class:  "Side-bar__user-name--top-items__icons__icon-lists" do
           = icon('fas', 'edit', class:  "Side-bar__user-name--top-items__icons__icon-lists--btn")
           %sapn<>
-        =link_to  " # ",  class:  "Side-bar__user-name--top-items__icons__icon-lists" do
+        =link_to  edit_user_path(current_user),  class:  "Side-bar__user-name--top-items__icons__icon-lists" do
           = icon('fas', 'cog',  class:  "Side-bar__user-name--top-items__icons__icon-lists--btn")
   .Side-bar__group-list
     .Side-bar__group-list__group
