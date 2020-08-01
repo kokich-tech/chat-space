@@ -23,6 +23,8 @@
       justify-content: space-between;
       &__name{
         width: auto;
+        color: white;
+        font-weight: bold;
       }
       &__icons{
         &__icon-lists{
@@ -41,6 +43,7 @@
     &__group{
       width: 260px;
       padding: 20px 0 40px;
+      text-decoration: none;
       &__name{
         font-size: 15px;
         color: white;
