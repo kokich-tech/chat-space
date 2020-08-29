@@ -1,8 +1,9 @@
 $(function(){
+  
   function buildHTML(message){
       if  ( message.image)  {
         let html  =
-          `<div class="Chat-main__message-list__info">
+          `<div class="Chat-main__message-list__info  data-message-id=${message.id}">
             <div class="Chat-main__message-list__info__name">
               ${message.user_name}
             </div>
@@ -19,7 +20,7 @@ $(function(){
         return  html;
       } else  {
         let html  = 
-        `<div class="Chat-main__message-list__info">
+        `<div class="Chat-main__message-list__info" data-message-id=${message.id}>
           <div class="Chat-main__message-list__info__name">
             ${message.user_name}
           </div>
@@ -61,4 +62,5 @@ $(function(){
       alert("メッセージ送信に失敗しました");
   });
   });
+
 });
